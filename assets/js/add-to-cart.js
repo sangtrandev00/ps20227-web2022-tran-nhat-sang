@@ -97,7 +97,7 @@ function addToCart(event) {
         "id": currentDataId,
         "uid": uniqueId,
         "name": currentProductName,
-        "price": currentProductPrice.toFixed(2),
+        "price": currentProductPrice,
         "color": currentProductColor,
         "size": choosenProductSize,
         "quantity": currentProductQty,
