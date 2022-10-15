@@ -1,0 +1,884 @@
+@mixin flexbox($align: flex-start, $justify: flex-start,$flex-direction: row , $wrap: nowrap) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $flex-direction;
+    flex-wrap: $wrap;
+}
+
+
+.container{
+
+}
+// Header
+
+.promotion-header {
+    
+    width: 100%;
+    // height: calc(var(--main-header-height) - var(--main-nav-height));
+    text-align: center;
+    padding: 1.5rem;
+    
+    &__text {
+        display: inline-block;
+        border-bottom: 4px solid var(--primary-color-1);
+        font-size: 1.2rem;
+    }
+}
+
+.navbar__container {
+  background-image: linear-gradient(to right, var(--primary-color-2), var(--primary-color-1));
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  &__logo{
+    font-size: 1.4rem;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+  } 
+  &__list{
+    display: flex;
+    align-items: center;
+}
+  &__item{
+    list-style-type: none;
+    margin-left: 3.2rem;
+
+    &-icon-search {
+      margin-top: 4px;
+      font-size: 1.6rem;
+      color: var(--text-color);
+      cursor: pointer;
+    }
+
+  }
+  &__item-link{
+    text-decoration: none;
+    font-size: var(--sm-title);
+    color: var(--text-color);
+    &:hover {
+      color: white;
+    }
+}
+  &__right-section{
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    color: var(--text-color);
+}
+  &__login{
+    display: flex;
+    align-items: center;
+    padding: 0rem 1rem;
+    font-size: 1.4rem;
+    &-item {
+      margin-left: 1rem;
+    }
+
+    &-icon {
+
+    }
+}
+  &__login-text{
+
+}
+  &__cart{
+    font-size: 1.4rem;
+    
+    &-icon {
+     
+    }
+}
+  &__cart-count{
+    display: inline-block;
+    padding:0.2rem 0.5rem;
+    background-color: var(--text-color);
+    border-radius: 100%;
+
+    color: white;
+    &-text {
+      display: inline-block;
+      color: white;
+
+    }
+}
+}
+
+
+.slider {
+  height: var(--slider-height);
+  position: relative;
+  &__wrap {
+    position: absolute;
+    top: 18rem;
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+  }
+
+  &__content {
+  
+    font-size: 8.8rem;
+    line-height: 10rem;
+    border-bottom: 10px solid var(--primary-color-1);
+  }
+
+  &__shop-btn {
+    position: relative;
+    top: 4rem;
+    margin-top: 2rem;
+
+    color: var(--text-color);
+    text-decoration: none;
+    border: 2px solid black;
+    padding:0.5rem 2rem;
+    letter-spacing: 0.26rem;
+    font-weight: 700;
+    font-size: 2rem;
+    font-family: 'Raleway';
+    &:hover {
+      color: var(--primary-color-1);
+      border-color: var(--primary-color-1);
+    }
+  }
+
+  // Common button
+  // &__control-btn {
+  //   position: absolute;
+  //   width: 44px;
+  //   height: 44px;
+  //   background-color: var(--slide-btn-bg-color);
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   cursor: pointer;
+  //   &-icon {
+  //     color: white;
+  //   }
+  // }
+
+  // &__next-btn {
+  //   position: absolute;
+  //   top: 50%;
+  //   right: 2rem;
+  //   transform: translateY(-50%);
+  // }
+
+  // &__prev-btn {
+  //   position: absolute;
+  //   top: 50%;
+  //   transform: translateY(-50%);
+  //   left: 2rem;
+  // }
+}
+
+// Catalog section
+.catalog {
+  height: var(--catalog-height);
+  display: flex;
+  margin-left: -2rem;
+  margin-top: 2rem;
+  width: 100%;
+  &__item{
+    object-fit: cover;
+    position: relative;
+    margin-left: 2rem;
+    width: 33.3333%;
+  }
+  &__item-overlay {
+    position: absolute;
+    background-color: rgba(#000, 0.4);
+    height: 100%;
+    width: 100%;
+  }
+
+  &__item-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__item-text {
+    position: absolute;
+    width: 211px;
+    height: 108px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.6rem;
+    text-align: center;
+    color: rgba(255,255,255, 0.8);
+    cursor: pointer;
+
+    &:hover {
+      color: var(--primary-color-1);
+    }
+  }
+}
+
+.grid{
+
+}
+.wide{
+
+}
+.flash-sale {
+  margin-top: 4rem;
+  &__banner{
+    width: 100%;
+    height: var(--banner-height);
+    background-color: var(--flash-sale-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    margin-top: -2rem;
+    border-radius: 0.8rem;
+  }
+
+  &__banner-text{
+    text-align: center;
+    color: white;
+  
+  }
+
+  &__banner-title{
+    font-size: 6.4rem;
+  }
+
+  &__banner-content{
+    font-size: 3.6rem;
+  }
+
+  // &__heading{
+  //   margin-top: 2rem;
+  //   font-size: var(--big-heading);
+  //   color: var(--text-color);
+  //   display: inline-block;
+  //   position: relative;
+  //   &::before{
+  //     position: absolute;
+  //     bottom: 5px;
+  //     content: "";
+  //     display: inline-block;
+  //     width: 100%;
+  //     height: 2px;
+  //     background-image: linear-gradient(to right, var(--primary-color-2), var(--primary-color-1));
+
+  //   }
+  // }
+
+  .countdown {
+    margin-top: 2rem;
+
+    display: flex;
+    align-items: center;
+    background-color: var(--flash-sale-bg-color);
+    justify-content: center;
+    color: white;
+    &__fire-icon{
+      width: 5rem;
+      transform: scale(1.5);
+    }
+    &__time-left{
+      font-size: 1.6rem;
+      margin-left: 2rem;
+      span {
+        font-size: 3.6rem;
+      }  
+    }
+  }
+  .product-list,
+  &__product-list{
+    margin-left: -2rem;
+    margin-top: 2rem;
+    display: flex;
+    position: relative;
+  }
+
+  .product-item-wrap,&__product-item{
+    width: 25%;
+  }
+}
+
+.product-item {
+  font-family: 'Raleway';
+  margin-left: 2rem;
+  position: relative;
+
+  &__bandage{
+    z-index: 1;
+    background-color: var(--bandage-bg-color);
+    display: inline-block;
+    padding: 2px 4px;
+    color: white;
+    font-size: 1.4rem;
+
+    position: absolute;
+    top:0;left:0;
+    font-weight: 600;
+    line-height: 1.6rem;
+  }
+
+  &__sold-quantity{
+    z-index: 1;
+    color: var(--bandage-bg-color);
+    position: absolute;
+    top:1rem;right:1rem;
+    font-size: 1.2rem;
+  }
+
+  &__img-container{
+    height: var(--product-item-height);
+    background-color: var(--product-bg-color);
+    position: relative;
+  }
+
+  &__img-img{
+
+
+    &--custom-shoes {
+      transform: translate(13px, -71px);
+      width: 90%;
+    }
+    
+  }
+
+  &__img-quick-view {
+    font-size: 1.4rem;
+    background-color: var(--main-hover-color);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem 0rem;
+    text-align: center;
+    padding: 0;
+    opacity: 0;
+    transition: all 0.4s;
+    visibility: hidden;
+  }
+
+  &__img-container {
+    &:hover {
+
+
+      .product-item__img-quick-view {
+       
+        cursor: pointer;
+        opacity: 1;
+        visibility: visible;
+        padding: 1rem 0rem;
+      }
+    }
+  }
+
+
+  &__body{
+    text-align: center;
+    color: var(--text-color);
+  }
+
+  &__name{
+    font-size: 1.8rem;
+    margin: 0.5rem 0;
+  }
+
+  &__divider{
+    display: inline-block;
+    width: 3rem;
+    height: 1px;
+    background-color: var(--text-color);
+  }
+  
+  &__price{
+    font-size: 1.6rem;
+    margin: 0.5rem 0;
+  }
+
+  &__price-old{
+    text-decoration: line-through;
+  }
+  
+  &__price-new{
+
+  }
+  &__hot-sale{
+    font-size: 1.6rem;
+    background-color: var(--flash-sale-bg-color);
+    color: white;
+    display: inline-block;
+    padding: 2px 3rem;
+  }
+
+  &__rating-stars{
+    margin: 1rem 0;
+  }
+
+  &__rating-icon{
+
+    &--yellow {
+      color: #FFC416;
+    }
+
+    &--black {
+
+    }
+  }
+
+  &__next-btn {
+    right: calc(-4rem - 2rem);
+  }
+
+  &__prev-btn {
+    left: -4rem;
+  } 
+
+}
+
+
+
+.latest-arrivals {
+
+  &__title{
+   
+  }
+  &__category{
+    margin: 2rem 0rem;
+    font-size: 3rem;
+    line-height: 1.15;
+    color: var(--text-color);
+  }
+}
+
+.product-item__img-img--custom-shirt {
+  transform: translate(3rem,6rem);
+  width: 80%;
+  
+}
+
+.product-item__img-img--custom-addidas {
+  transform: translate(0,6rem);
+}
+
+.new-collections {
+  
+  margin-top: 4rem;
+
+  &__items {
+    justify-content: center;
+  }
+
+  &__img {
+    width: 100%;
+
+    &--formen {
+      margin-left: -4rem;
+    }
+
+    &--forwomen {
+      margin-right: -4rem;
+    }
+  }
+
+  &__title {
+    position: relative;
+    width: 1rem;
+    &::before {
+      content: "NEW COLLECTION";
+      display: inline-block;
+      width: 60rem;
+      position: absolute;
+      top: 24rem;
+      left: -26rem;
+      transform: rotate(90deg);
+      font-size: 6.5rem;
+      font-weight: 700;
+      color: var(--primary-color-1);
+    }
+
+  }
+
+  &__title::before {
+  
+  }
+
+}
+
+
+.footwear-banner {
+  margin-top: 4rem;
+  &__container {   
+    position: relative;
+  }
+
+  &__img {
+
+  }
+
+  &__shop-btn {
+    color: white;
+    border-color: white;
+    bottom: 8rem;
+    left: 9.2rem;
+  }
+}
+
+// Brands section styles
+.brands{
+
+}
+
+.brands {
+  &__heading{
+    margin: 2rem 0;
+}
+  &__title{
+
+}
+  &__items{
+    display: flex;
+    align-items: center;
+    background: var(--product-bg-color);
+}
+  &__item{
+    width: 20%;
+}
+  &__item-img{
+
+}
+}
+.section {
+  &-heading{
+   
+}
+}
+
+.brands {
+  &__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+  }
+
+  &__title{
+    margin-top: 0;
+}
+  &-control{
+
+}
+  &__next-btn{
+
+}
+  &-control-icon{
+
+}
+  &__prev-btn{
+    margin-right: 2rem;
+}
+}
+.section {
+  &-heading{
+
+}
+}
+
+
+
+// Blog section
+
+.grid{
+
+}
+.wide{
+
+}
+.blog-section {
+
+  background-image: linear-gradient(to bottom, #d9d9d9, #ffff);
+  padding: 2rem 0rem 4rem;
+
+  &__heading{
+    margin: 6rem 0rem 2rem; 
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+  &__title{
+    margin-top: 0;
+}
+  &__content{
+    display: flex;
+    font-family: "Raleway";
+    &-left {
+      width: 50%;
+    }
+
+    &-right {
+      width: 50%;
+      padding-left: 4rem;
+    }
+
+}
+  &__content-img{
+    
+}
+  &__content-heading{
+    font-size: var(--md-heading);
+    font-family: "Open Sans";
+}
+  &__content-author{
+    font-size: 2.4rem;
+    margin: 1rem 0;
+}
+  &__content-desc{
+    font-size: 1.6rem;
+    line-height:1.6
+    
+}
+  &__content-btn{
+    margin-top: 2rem;
+
+    padding: 1rem 5rem;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    font-size: 1.8rem;
+    font-family: "Raleway";
+    display: inline-block;
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: var(--primary-color-1);
+    }
+}
+}
+
+// Feedback section
+
+
+.feedback{
+
+}
+.grid{
+
+}
+.wide{
+
+}
+.feedback {
+  background-image: linear-gradient(to bottom, transparent, #d9d9d9);
+  padding-bottom: 4rem;
+  &__container {
+  }
+
+  &__heading{
+
+}
+  &__slogan{
+    font-size: 3.6rem;
+    color: var(--text-color);
+    font-weight: 400;
+    margin: 4rem 0;
+
+}
+  &__content{
+    display: flex;
+    margin-left: -2rem;
+}
+  &__item{
+    width: 33.3333333%;
+    margin-left: 2rem;
+
+    padding: 2rem;
+    border-radius: 8px;
+
+    background-color: #fff;
+
+    &--center {
+      margin-top: 4rem;
+    }
+}
+  &__item-author{
+    font-size: 1.6rem;
+    font-weight: 500;
+
+    display: flex;
+}
+  &__item-avatar{
+
+}
+  &__item-author-name{
+  margin-left: 2rem;    
+}
+  &__item-author-rating{
+
+}
+  &__item-author-rating-icon{
+
+}
+  &__item-author-rating-icon--yellow{
+    color: var(--star-rating);
+}
+  &__item-author-rating-icon--black{
+
+}
+  &__item-verified{
+    margin: 1rem 0rem;
+    padding: 0.2rem 0.5rem;
+    display: inline-block;
+    color: #064E3B;
+    font-weight: 600;
+    font-size: 1.2rem;
+    background-color: #ECFDF5;
+}
+  &__item-desc{
+    font-size: 1.6rem;
+}
+  &__item-link{
+    margin: 1rem 0;
+
+    display: inline-block;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--primary-color-1);
+    }
+}
+}
+
+
+// Instagram section
+
+.instagram {
+  // position: relative;
+  
+  &__title{
+    margin: 6rem auto 4rem;
+    display: inline-block;
+    width: 35rem;
+    text-align: center;
+    line-height: 6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+  &__gallery{
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+  &__item{
+    width: 20%;
+}
+  &__img{
+    // object-fit: cover;
+    width: 100%;
+}
+  &__gallery-btn{
+
+}
+  &__gallery-btn-icon{
+
+}
+}
+
+// Footer section
+
+.footer{
+  
+}
+.grid{
+
+}
+.wide{
+
+}
+.footer {
+  margin-top: 4rem;
+  background-color: #D9D9D9;
+  padding: 8rem 0;
+  font-weight: 600;
+  color: var(--text-color);
+  &-top{
+    display: flex;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+  &-top__col{
+    width: 25%;
+}
+  &-top__logo-wrap{
+
+}
+  &-top__col-title{
+    font-size: 2.4rem;
+    color: black;
+    text-decoration: none;
+    
+}
+  &-top__col-list{
+    list-style-type: none;
+    margin-top: 2rem;
+}
+  &-top__col-item{
+    margin: 1rem 0;
+}
+  &-top__col-link{
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: #565656;
+    &:hover {
+      color: var(--primary-color-1);
+    }
+}
+  &-bottom{
+    display: flex;
+    margin-top: 4rem;
+}
+  &-bottom__copyright{
+    width: 50%;
+    font-size: 1.6rem;
+    color: #565656;
+}
+  &-bottom__payment-accept{
+    width: 50%;
+}
+}
+
+.payment {
+  &-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -1rem;
+}
+  &-img{
+    margin-left: 1rem;
+    margin: 1rem;
+}
+}
+
+.payment-accept__title {
+  font-size: 2.4rem;
+}
+
+
